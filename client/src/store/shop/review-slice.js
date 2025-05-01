@@ -14,7 +14,7 @@ export const addReview = createAsyncThunk(
     try {
       const token = getState().auth?.userToken; // Ensure token exists
       const response = await axios.post(
-        "https://mern-ecomm-backend-3y6l.onrender.comapi/shop/review/add",
+        "https://mern-ecomm-backend-3y6l.onrender.com/api/shop/review/add",
         formdata,
         {
           headers: {
@@ -36,7 +36,7 @@ export const getReviews = createAsyncThunk(
   async (id, { rejectWithValue }) => {
     try {
       const response = await axios.get(
-        `https://mern-ecomm-backend-3y6l.onrender.comapi/shop/review/${id}`
+        `https://mern-ecomm-backend-3y6l.onrender.com/api/shop/review/${id}`
       );
       return response.data;
     } catch (error) {

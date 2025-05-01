@@ -9,7 +9,7 @@ export const getFeatureImages = createAsyncThunk(
   "/order/getFeatureImages",
   async () => {
     const response = await axios.get(
-      `https://mern-ecomm-backend-3y6l.onrender.comapi/common/feature/get`
+      `https://mern-ecomm-backend-3y6l.onrender.com/api/common/feature/get`
     );
 
     return response.data;
@@ -20,7 +20,7 @@ export const addFeatureImage = createAsyncThunk(
   "/order/addFeatureImage",
   async (image) => {
     const response = await axios.post(
-      `https://mern-ecomm-backend-3y6l.onrender.comapi/common/feature/add`,
+      `https://mern-ecomm-backend-3y6l.onrender.com/api/common/feature/add`,
       { image }
     );
 
